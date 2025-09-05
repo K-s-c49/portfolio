@@ -1,249 +1,345 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>My portfolio</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portfolio</title>
+
+  <!-- Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Font Awesome (latest) -->
+  <link rel="stylesheet" 
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" 
+        integrity="sha512-SVLrL1jGvBC0UgFmqj5Q4FrWcN5z6kD5v7b36nV2skzK9tU9iP+0DBRfDJB+eY4fLRXbzOZwbZ9zU2dl5z7xfg==" 
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <!-- Bootstrap Icons -->
+  <link rel="stylesheet" 
+        href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+
+  <!-- Custom CSS -->
   <link rel="stylesheet" href="style.css">
-  <link rel="stylesheet" href="mediaqueries.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4Q6Gf2aSP4eDXB8Miphtr37CMZZQ5oXLH2yaXMJ2w8e2ZtHTl7GptT4jmndRuHDT" crossorigin="anonymous">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
-  
 </head>
-
 <body>
-  <nav class="navbar navbar-expand-lg bg-body-tertiary" id="desktop-nav">
-    <div  class="container justify-content-center ms-auto fs-9">
-      <ul class="navbar-nav" class="nav-links" class="container-fluid">
-        <li class="nav-item"><a class="navbar-brand" href="#about">About</a></li>
-        <li class="nav-item"><a class="navbar-brand" href="#Experince">Experince</a></li>
-        <li class="nav-item"><a class="navbar-brand" href="#project">Project</a></li>
-        <li class="nav-item"><a class="navbar-brand" href="#contact">Contact</a></li>
-      </ul>
-    </div>      
-  </nav>
+  <!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-gradient shadow fixed-top">
+  <div class="container">
+    <!-- Logo -->
+    <a class="navbar-brand d-flex align-items-center" href="#">
+      <img src="logo.png" alt="Logo" width="40" height="40" class="me-2">
+      <span class="fw-bold text-dark fs-4">MyPortfolio</span>
+    </a>
 
-  <div class="container py-5">
-    <div class="row align-items-center">
-      
-      <!-- Circular Image -->
-      <div class="col-12 col-md-4 text-center text-md-start mb-4 mb-md-0">
-        <img src="IMG_20241201_080902_738.webp" alt="Profile" class="circle-img">
-      </div>
+    <!-- Custom Hamburger -->
+    <button class="hamburger" id="hamburger">
+      <span></span>
+    </button>
 
-      <!-- Text next to the image -->
-      <div class="col-12 col-md-8 text-center text-md-start">
-        <p>Hello I'm</p>
-        <h2>Khushal Singh</h2>
-        <p>Backend developer</p>
-        <p>
-          This is some example text that appears beside the circular image. On small screens, it stacks vertically, and on larger screens, it's horizontal.
-        </p>
-        <div class="btn-container">
-          <button class="btn btn-color-2" onclick="window.open('./resume.txt')">Download Cv</button>
-          <button class="btn btn-color-1" onclick="location.href='./#contact'">Contact info</button>
-        </div>
-        <div id="social-container">
-          <img src="./icons8-linkedin-50.png" alt="my linkdin portfolio" class="icon"
-            onclick="location.href='https:// link dil ki id cop paste'">
-          <img src="./icons8-gmail-50.png" alt="my gmail portfolio" class="icon"
-            onclick="location.href='https:// link gmail dil ki id cop paste'">
-        </div>
-      </div>
+    <!-- Sidebar Navigation -->
+    <div class="nav-links-wrapper" id="navMenu">
+      <ul class="navbar-nav text-center">
+  <li><a class="nav-link" style="--i:1;" href="#about">About</a></li>
+  <li><a class="nav-link" style="--i:2;" href="#experience">Experience</a></li>
+  <li><a class="nav-link" style="--i:3;" href="#project">Projects</a></li>
+  <li><a class="nav-link" style="--i:4;" href="#contact">Contact</a></li>
+</ul>
 
     </div>
+
+    <!-- Overlay -->
+    <div class="overlay" id="overlay"></div>
   </div>
-  <div class="container py-5" id="about">
-    <p class="section__text__p1">Get to know more</p>
-    <h1 class="title">About Me</h1>
-    <div class="row align-items-center">
+</nav>
 
-      <!-- Image on the left -->
-      <div class="col-12 col-md-4 mb-4 mb-md-0">
-        <div class="rounded-square-box">
-          <img src="WhatsApp Image 2024-12-26 at 7.42.06 PM.jpeg" alt="Rounded Box Image" class="img-fluid">
-        </div>
-      </div>
+   <!-- Hero -->
+<section class="hero d-flex align-items-center" id="home">
+  <!-- Background Graphics -->
+  <div class="hero-bg">
+    <div class="circle"></div>
+    <div class="circle delay"></div>
+    <div class="blob"></div>
+  </div>
 
-      <!-- Text on the right -->
-      <div class="col-12 col-md-8 text-center text-md-start">
-        <div class="about-container">
-        <div class="details-container">
-          <img src="rb_7040.png" alt="Experince icon" class="icon"/>
-          <h3>Experince</h3>
-          <p>no years Experince i m fresher! <br> Frontend development</p>
-        </div>
-        <div class="details-container">
-          <img src="icons8-student-male-50.png" alt="education icon" class="icon"/>
-          <h3>education</h3>
-          <p>under-education! <br> 4th semester in <abbr title="bachelors of computer application">B.CA.</abbr> bachelors</p>
-        </div>
+  <div class="container position-relative">
+    <div class="row align-items-center flex-column-reverse flex-md-row">
+      <!-- Text -->
+      <div class="col-12 col-md-7 text-center text-md-start hero-text glass-card p-4 rounded">
+        <p class="intro">👋 Hello, I'm</p>
+        <h1 class="fw-bold display-4 text-gradient-anim">Khushal Singh</h1>
+        <h4 class="role">Full Stack Developer</h4>
+        <p class="hero-desc">I’m passionate about building modern web applications. I create clean, responsive, and scalable solutions.</p>
+        
+        <!-- Buttons -->
+        <div class="d-flex flex-wrap gap-3 mt-3 justify-content-center justify-content-md-start">
+          <a href="./resume.txt" class="btn btn-hero btn-primary"><i class="bi bi-download"></i> Download CV</a>
+          <a href="#contact" class="btn btn-hero btn-outline"><i class="bi bi-envelope"></i> Contact Info</a>
         </div>
         
-        <h2>Responsive Image & Text Layout</h2>
-        <p>
-          This layout displays a square image with rounded corners on the left and descriptive text on the right.
-          It adapts to all screen sizes—on small devices, the image and text stack vertically.
+        <!-- Social Icons -->
+        <div class="social-icons mt-4">
+          <a href="https://linkedin.com" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+          <a href="mailto:example@gmail.com"><i class="fa-solid fa-envelope"></i></a>
+          <a href="https://github.com" target="_blank"><i class="fa-brands fa-github"></i></a>
+          <a href="https://twitter.com" target="_blank"><i class="fa-brands fa-twitter"></i></a>
+        </div>
+      </div>
+
+      <!-- Profile -->
+      <div class="col-12 col-md-5 text-center mb-4 mb-md-0">
+        <div class="profile-wrapper">
+          <div class="profile-glow"></div>
+          <img src="IMG_20241201_080902_738.webp" alt="Profile" class="profile-img">
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- About Section -->
+<section id="about" class="section about-section">
+  <div class="container text-center">
+    <!-- Subtitle -->
+    <p class="section-subtitle">✨ Get to know more</p>
+    <h2 class="section-title">About Me</h2>
+
+    <div class="row mt-5 align-items-center">
+      <!-- Profile Image -->
+      <div class="col-12 col-md-5 mb-4">
+        <div class="about-img-wrapper">
+          <div class="about-img-glow"></div>
+          <img src="WhatsApp Image 2024-12-26 at 7.42.06 PM.jpeg" alt="About Me" class="about-img">
+        </div>
+      </div>
+
+      <!-- Details -->
+      <div class="col-12 col-md-7 text-start">
+        <div class="d-flex flex-wrap gap-4 mb-4 justify-content-center justify-content-md-start">
+          <!-- Experience Card -->
+          <div class="info-card fade-in-up">
+            <div class="icon-wrapper">
+              <i class="bi bi-briefcase-fill"></i>
+            </div>
+            <h5>Experience</h5>
+            <p>Fresher - Frontend Development</p>
+          </div>
+
+          <!-- Education Card -->
+          <div class="info-card fade-in-up delay">
+            <div class="icon-wrapper">
+              <i class="bi bi-mortarboard-fill"></i>
+            </div>
+            <h5>Education</h5>
+            <p>4th Semester BCA</p>
+          </div>
+        </div>
+
+        <!-- About Text -->
+        <p class="about-text">
+          I love solving problems with <span class="highlight">clean</span> and 
+          <span class="highlight">modern</span> web technologies.  
+          Currently, I’m building projects using 
+          <strong>Python, MySQL, Java, and C++</strong>,  
+          aiming to grow into a versatile full-stack developer.
         </p>
       </div>
     </div>
   </div>
+</section>
+ <!-- Experience Section -->
+<section id="experience" class="experience section">
+  <div class="container text-center">
+    <p class="section-subtitle">🚀 Explore My</p>
+    <h2 class="section-title">Experience</h2>
 
-      <div class="container py-5" id="Experince">
-        <p class="text-center">Explore My</p>
-        <h1 class="title">Experience</h1>
-        <div class="row align-items-center">
-    
-          <!-- Left side: Frontend languages in a square box -->
-          <div class="col-12 col-md-6 mb-4 mb-md-0">
-            <div class="rounded-square-box d-flex flex-column justify-content-center align-items-center text-center">
-              <h2 class="Experince-sub-title">Frontend development</h2>
-                  <div>
-                      <span><i class="bi bi-check-circle-fill text-success"></i></span>
-                      <h3>HTML</h3>
-                      <p>Experience</p>
-                  </div>
-                  <div>
-                    <span><i class="bi bi-check-circle-fill text-success"></i></span>
-                    <h3>CSS</h3>
-                    <p>intermediate</p>
-                </div>
-                <div>
-                  <span><i class="bi bi-check-circle-fill text-success"></i></span>
-                  <h3>JAVASCRIPT</h3>
-                  <p>basic</p>
-              </div>
-              <div>
-                <span><i class="bi bi-check-circle-fill text-success"></i></span>
-                <h3>BOOTSTRAP</h3>
-                <p>basic</p>
-            </div>
-            </div>
+    <div class="row mt-5">
+      <!-- Frontend -->
+      <div class="col-md-6 mb-4">
+        <div class="exp-card fade-in-up">
+          <div class="exp-icon"><i class="bi bi-laptop"></i></div>
+          <h5>Frontend Development</h5>
+          
+          <!-- Skills -->
+          <div class="skill">
+            <span>HTML</span>
+            <div class="progress"><div class="progress-bar" style="width: 90%;">Experienced</div></div>
           </div>
-    
-          <div class="col-12 col-md-6 mb-4 mb-md-0">
-            <div class="rounded-square-box d-flex flex-column justify-content-center align-items-center text-center">
-              <h2 class="Experince-sub-title">backend development</h2>
-              <div>
-                  <span><i class="bi bi-check-circle-fill text-success"></i></span>
-                  <h3>PYTHON</h3>
-                  <p>intermediate</p>
-              </div>
-              <div>
-                <span><i class="bi bi-check-circle-fill text-success"></i></span>
-                <h3>MY_SQL</h3>
-                <p>intermediate</p>
-            </div>
-            <div>
-              <span><i class="bi bi-check-circle-fill text-success"></i></span>
-              <h3>JAVA</h3>
-              <p>basic</p>
+          <div class="skill">
+            <span>CSS</span>
+            <div class="progress"><div class="progress-bar" style="width: 70%;">Intermediate</div></div>
           </div>
-          <div>
-            <span><i class="bi bi-check-circle-fill text-success"></i></span>
-            <h3>C#,C++</h3>
-            <p>intermediate</p>
-        </div>
+          <div class="skill">
+            <span>JavaScript</span>
+            <div class="progress"><div class="progress-bar" style="width: 50%;">Basic</div></div>
+          </div>
+          <div class="skill">
+            <span>Bootstrap</span>
+            <div class="progress"><div class="progress-bar" style="width: 50%;">Basic</div></div>
+          </div>
         </div>
       </div>
-<hr>
-      <section id="project">
-        <p class="text-center">Browse My Recent</p>
-        <h1 class="title">Project</h1>
-      <div class="container">
-        <div class="box">
-          <img src="project-management-planning-development-message-box-notification-graphic.jpg" alt="project1"
-          class="project-img">
-          <p>Project One</p>
-          <div class="btn-container">
-            <button class="btn btn-primary btn-lg w-100 w-md-auto" class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation" class="btn btn-color-2 project-btn" onclick="location.href='https://khushalsingh.netlify.app/'">
-              Live demo
-            </button>
+
+      <!-- Backend -->
+      <div class="col-md-6 mb-4">
+        <div class="exp-card fade-in-up delay">
+          <div class="exp-icon"><i class="bi bi-database"></i></div>
+          <h5>Backend Development</h5>
+          
+          <!-- Skills -->
+          <div class="skill">
+            <span>Python</span>
+            <div class="progress"><div class="progress-bar" style="width: 70%;">Intermediate</div></div>
           </div>
-        </div>
-        <div class="box">
-          <img src="rb_1294.png" alt="project1"
-          class="project-img">
-          <p>Project Two</p>
-          <button class="btn btn-primary btn-lg w-100 w-md-auto" class="btn btn-color-2 project-btn" onclick="location.href='https://khushalsingh.netlify.app/'">
-            Live demo
-          </button>
-        </div>
-        <div class="box">
-          <img src="project-management-planning-development-message-box-notification-graphic.jpg" alt="project1"
-          class="project-img">
-          <p>Project Three comming-soon</p>
-          <button class="btn btn-primary btn-lg w-100 w-md-auto" class="btn btn-color-2 project-btn" onclick="location.href='https://khushalsingh.netlify.app/'">
-            Live demo
-          </button>
-        </div>
-      </div>
-    </section>
-    <p class="text-center">Get in Touch</p>
-    <h1 class="title">Contact me</h1>
-    <br>
-    <br>
-    <div class="container" id="contact">
-      <div class="row g-4 justify-content-center">
-        <!-- Mail Box -->
-        <div class="col-12 col-md-5">
-          <div class="info-box">
-            Mail
-            <img src="https://cdn-icons-png.flaticon.com/512/732/732200.png" alt="Mail Icon" onclick="location.href= 'https://mailto:example@gmail.com'" />
+          <div class="skill">
+            <span>MySQL</span>
+            <div class="progress"><div class="progress-bar" style="width: 70%;">Intermediate</div></div>
           </div>
-        </div>
-        <!-- LinkedIn Box -->
-        <div class="col-12 col-md-5">
-          <div class="info-box">
-            LinkedIn
-            <img src="https://cdn-icons-png.flaticon.com/512/174/174857.png" alt="LinkedIn Icon"  onclick="location.href= 'https://www.LinkedIn.com'"/>
+          <div class="skill">
+            <span>Java</span>
+            <div class="progress"><div class="progress-bar" style="width: 50%;">Basic</div></div>
+          </div>
+          <div class="skill">
+            <span>C#, C++</span>
+            <div class="progress"><div class="progress-bar" style="width: 65%;">Intermediate</div></div>
           </div>
         </div>
       </div>
     </div>
-  <footer class=" pt-4">
-    <div class="container">
-      <div class="row">
+  </div>
+</section>
+<!-- Projects Section -->
+<section id="project" class="project section">
+  <div class="container text-center">
+    <p class="section-subtitle">📂 Browse My Recent</p>
+    <h2 class="section-title">Projects</h2>
 
-        <!-- About -->
-        <div class="col-md-4 mb-3">
-          <h5>About Us</h5>
-          <p>
-            We are a company dedicated to providing the best service with quality and care.
-          </p>
-        </div>
-
-        <!-- Quick Links -->
-        <div class="col-md-4 mb-3">
-          <h5>Quick Links</h5>
-          <ul class="list-unstyled">
-            <li><a href="#" class="text-dark text-decoration-none">About</a></li>
-            <li><a href="#" class="text-dark text-decoration-none">Experience</a></li>
-            <li><a href="#" class="text-dark text-decoration-none">Project</a></li>
-            <li><a href="#" class="text-dark text-decoration-none">Contact</a></li>
-          </ul>
-        </div>
-      
-        <div class="col-md-4 mb-3">
-          <h5>Contact Us</h5>
-          <p>
-            Email: info@example.com <br />
-            Phone: +91 8733000000 <br />
-            Address: 1234 Street Name, City, Country
-          </p>
+    <div class="row mt-5">
+      <!-- Project 1 -->
+      <div class="col-md-4 mb-4">
+        <div class="project-card fade-in-up">
+          <div class="project-img-wrapper">
+            <img src="project-management-planning-development-message-box-notification-graphic.jpg" alt="Project 1">
+            <div class="project-overlay">
+              <a href="https://khushalsingh.netlify.app/" target="_blank" class="btn btn-light btn-sm">
+                <i class="bi bi-box-arrow-up-right"></i> Live Demo
+              </a>
+            </div>
+          </div>
+          <h5 class="mt-3">Project One</h5>
         </div>
       </div>
-      <hr class="bg-dark" />
-      <div class="text-center pb-3">
-        &copy; 2025 Khushal Singh Chundawat. All rights reserved.
+
+      <!-- Project 2 -->
+      <div class="col-md-4 mb-4">
+        <div class="project-card fade-in-up delay">
+          <div class="project-img-wrapper">
+            <img src="rb_1294.png" alt="Project 2">
+            <div class="project-overlay">
+              <a href="https://khushalsingh.netlify.app/" target="_blank" class="btn btn-light btn-sm">
+                <i class="bi bi-box-arrow-up-right"></i> Live Demo
+              </a>
+            </div>
+          </div>
+          <h5 class="mt-3">Project Two</h5>
+        </div>
+      </div>
+
+      <!-- Project 3 -->
+      <div class="col-md-4 mb-4">
+        <div class="project-card fade-in-up delay2">
+          <div class="project-img-wrapper">
+            <img src="project-management-planning-development-message-box-notification-graphic.jpg" alt="Project 3">
+            <div class="project-overlay">
+              <a href="#" class="btn btn-light btn-sm disabled">
+                <i class="bi bi-hourglass-split"></i> Coming Soon
+              </a>
+            </div>
+          </div>
+          <h5 class="mt-3">Project Three</h5>
+        </div>
       </div>
     </div>
-  </footer>    
+  </div>
+</section>
+<!-- Contact Section -->
+<section id="contact" class="contact section">
+  <div class="container text-center">
+    <p class="section-subtitle">📬 Get in Touch</p>
+    <h2 class="section-title">Contact Me</h2>
+
+    <div class="row mt-5 justify-content-center">
+      <!-- Email Card -->
+      <div class="col-md-5 mb-4">
+        <div class="contact-card fade-in-up">
+          <div class="icon-wrapper">
+            <img src="icons8-gmail-50.png" alt="Email Icon">
+          </div>
+          <h5>Email</h5>
+          <p>
+            <a href="mailto:example@gmail.com" class="contact-link">example@gmail.com</a>
+          </p>
+        </div>
+      </div>
+
+      <!-- LinkedIn Card -->
+      <div class="col-md-5 mb-4">
+        <div class="contact-card fade-in-up delay">
+          <div class="icon-wrapper">
+            <img src="icons8-linkedin-50.png" alt="LinkedIn Icon">
+          </div>
+          <h5>LinkedIn</h5>
+          <p>
+            <a href="https://linkedin.com" target="_blank" class="contact-link">View My Profile</a>
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="footer text-center text-lg-start">
+  <div class="container py-5">
+    <div class="row">
+      <!-- Brand -->
+      <div class="col-lg-4 col-md-6 mb-4 fade-in-up">
+        <h5 class="footer-brand">🌐 MyPortfolio</h5>
+        <p class="footer-text">Building clean, modern, and scalable web applications. 🚀</p>
+      </div>
+
+      <!-- Quick Links -->
+      <div class="col-lg-4 col-md-6 mb-4 fade-in-up delay">
+        <h5 class="footer-title">Quick Links</h5>
+        <ul class="footer-links list-unstyled">
+          <li><a href="#about"><i class="bi bi-person-circle"></i> About</a></li>
+          <li><a href="#experience"><i class="bi bi-gear-fill"></i> Experience</a></li>
+          <li><a href="#project"><i class="bi bi-folder-fill"></i> Projects</a></li>
+          <li><a href="#contact"><i class="bi bi-envelope-fill"></i> Contact</a></li>
+        </ul>
+      </div>
+
+      <!-- Social -->
+      <div class="col-lg-4 col-md-12 mb-4 fade-in-up delay2">
+        <h5 class="footer-title">Connect</h5>
+        <div class="social-icons">
+          <a href="mailto:example@gmail.com"><i class="fa-solid fa-envelope"></i></a>
+          <a href="https://linkedin.com" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+          <a href="https://github.com" target="_blank"><i class="fa-brands fa-github"></i></a>
+          <a href="https://twitter.com" target="_blank"><i class="fa-brands fa-twitter"></i></a>
+        </div>
+      </div>
+    </div>
+
+    <hr class="footer-divider">
+    <p class="footer-copy">&copy; 2025 Khushal Singh Chundawat. All rights reserved.</p>
+  </div>
+</footer>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Custom Script -->
   <script src="script.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js" integrity="sha384-j1CDi7MgGQ12Z7Qab0qlWQ/Qqz24Gc6BM0thvEMVjHnfYGF0rmFCozFSxQBxwHKO" crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.min.js" integrity="sha384-RuyvpeZCxMJCqVUGFI0Do1mQrods/hhxYlcVfGPOfQtPJh0JCw12tUAZ/Mv10S7D" crossorigin="anonymous"></script>
 </body>
 </html>
