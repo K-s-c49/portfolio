@@ -602,28 +602,98 @@ body {
   margin-bottom: 5px;
   color: #333;
 }
+
+/*jdbchjsbhbjhdbhdb*/
+/* Base progress */
 .progress {
   height: 25px;
   border-radius: 12px;
-  background: rgba(0,0,0,0.05);
+  background: rgba(0, 0, 0, 0.1);
   overflow: hidden;
   position: relative;
+  box-shadow: inset 0 2px 6px rgba(0,0,0,0.2);
 }
+
+/* Core animated bar */
 .progress-bar {
   height: 100%;
-  background: linear-gradient(90deg, var(--primary), var(--accent));
   color: #fff;
   font-size: 0.85rem;
   font-weight: 600;
   text-align: center;
   line-height: 25px;
   border-radius: 12px;
-  animation: growBar 1.8s ease-out forwards;
+  animation: growBar 2s ease-out forwards, gradientFlow 6s ease infinite;
+  position: relative;
+  overflow: hidden;
+  --progress: 75%; /* default */
 }
+
+/* Shine effect */
+.progress-bar::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -75%;
+  width: 50%;
+  height: 100%;
+  background: linear-gradient(
+    120deg,
+    rgba(255, 255, 255, 0.6) 0%,
+    rgba(255, 255, 255, 0) 80%
+  );
+  transform: skewX(-25deg);
+  animation: shine 3s infinite;
+}
+
+/* Theme colors */
+.progress-bar.primary {
+  background: linear-gradient(270deg, #0d6efd, #6610f2, #0dcaf0);
+  background-size: 400% 400%;
+}
+
+.progress-bar.success {
+  background: linear-gradient(270deg, #198754, #20c997, #85ffbd);
+  background-size: 400% 400%;
+}
+
+.progress-bar.warning {
+  background: linear-gradient(270deg, #ffc107, #ff7e5f, #ffae00);
+  background-size: 400% 400%;
+}
+
+.progress-bar.danger {
+  background: linear-gradient(270deg, #dc3545, #ff416c, #ff4b2b);
+  background-size: 400% 400%;
+}
+
+.progress-bar.info {
+  background: linear-gradient(270deg, #0dcaf0, #6f86d6, #48c6ef);
+  background-size: 400% 400%;
+}
+
+.progress-bar.purple {
+  background: linear-gradient(270deg, #6f42c1, #d9afd9, #a18cd1);
+  background-size: 400% 400%;
+}
+
+/* Keyframes */
 @keyframes growBar {
   from { width: 0; }
-  to { width: var(--final-width); }
+  to { width: var(--progress, 70%); }
 }
+
+@keyframes gradientFlow {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+@keyframes shine {
+  0% { left: -75%; }
+  100% { left: 125%; }
+}
+
 
 /* Fade Animation */
 .fade-in-up {
